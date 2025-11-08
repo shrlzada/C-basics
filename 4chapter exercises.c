@@ -180,6 +180,7 @@ int main(){
 }*/
 
 //4.17
+/*
 int main(){
     int acc[3], old[3], current[3], new[3];
 
@@ -200,7 +201,108 @@ int main(){
     }
 
     return 0; 
+    }*/
+   // 4.19
+/*
+int main(){
+    int product_num, quantity;
+    float sale=0;
+
+    printf("Enter product number (1-5) and quantity sold or -1 to exit:\n");
+
+     while (1) {
+        if (scanf("%d", &product_num) != 1) {
+            break; 
+        }
+        if (product_num == -1) {
+            break;
+        }
+        if (scanf("%d", &quantity) != 1) {
+            break;
+        }
+        switch(product_num){
+            case 1:
+            sale+=quantity*2.98;
+            break;
+
+            case 2:
+            sale+=quantity*4.5;
+            break;
+
+            case 3:
+            sale+=quantity*9.98;
+            break;
+
+            case 4:
+            sale+=quantity*4.49;
+            break;
+
+            case 5:
+            sale+=quantity*6.87;
+            break;
+           
+            
+            default:
+            printf("Incorrect input");
+            break;
+
+}}
+ printf("\nTotal sales: %.2f ", sale);
+ return 0;
+} */
+//4.21
+/*
+int main(){
+    int i=0;
+    char something[33][4]={"NUL", "SOH", "STX","ETX","EOT","ENQ","ACK","BEL","BS","HT","LF","VT",
+        "FF","CR","SO","SI","DEL","DC1","DC2","DC3","DC4","NAK","SYN","ETB","CAN","EM","SUB","ESC","FS","GS","RS","US"};
+
+    for (i; i<=127;i++){
+        if (i<32){
+            printf("%s\t", something[i]);
+        }
+        else{printf("%c\t", i);}
+        
+        if ((i+1)%10 == 0){
+            printf("\n");
+        }
     }
-   
+}*/
+//4.26
+/*
+int main(){
+    float pi=0;
+    float approximation[100];
+    float denominator=1.0;
+    int i=1;
+    float sign=1;
+    printf("%5s%21s\n","Term","Approximation");
+    for(i;i<=100;i++){
+        pi = pi + sign*4/denominator;
+        sign*=-1;
+        denominator += 2;
+        approximation[i]=pi;
+        printf("%5d%21f\n",i,approximation[i]);
+    }
+    return 0;
+}*/
+
+//4.27
+/*
+int main(){
+    printf("%10s%10s%15s","Side 1","Side 2", "Hypotenuse");
+
+    for (int side1=1;side1<500;side1++){
+        for (int side2=side1;side2<500;side2++){
+            for(int hypotenuse=side2;hypotenuse<500;hypotenuse++){
+                if (side1*side1+side2*side2==hypotenuse*hypotenuse){
+                    printf("%10d%10d%15d\n", side1,side2,hypotenuse);
+                }
+            }
+        }
+    }
+    return 0;
+}*/
+
 
 
